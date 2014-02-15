@@ -12,8 +12,11 @@
                 <div class="form-group">
 
                     <label for="eventDate">Event Date:</label>
-                    <input id="eventDate" type="text" class="form-control" required ng-pattern="/\d\d/\d\d/\d\d\d\d/"
+                    <div style="position: relative">
+                    <input id="eventDate" type="text" class="form-control" date-keys required ng-pattern="/\d\d/\d\d/\d\d\d\d/"
                            ng-model="event.date" placeholder="format (mm/dd/yyyy)..."/>
+                    <date-picker for="eventDate"/>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="eventTime">Event Time:</label>

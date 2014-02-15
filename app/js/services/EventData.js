@@ -13,7 +13,7 @@ eventsApp.factory('eventData', function ($resource, $q, $timeout) {
                     function (response) {
                         deferred.reject(response);
                     });
-            }, 3000);
+            }, 0);
             return deferred.promise;
         },
         save: function (event) {
