@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 .hoverwell:hover {
-    background-color: #52575c;
+    /*background-color: #52575c;*/
     cursor: pointer;
 }
 select, textarea {
