@@ -1,2 +1,3 @@
 #!/bin/sh
-node scripts/web-server.js
+cd app
+node ../scripts/web-server.js

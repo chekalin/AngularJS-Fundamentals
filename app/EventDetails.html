@@ -17,7 +17,7 @@
         </div>
     </div>
     <div ng-controller="EventController" style="padding-left: 20px; padding-right: 20px">
-        <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
+        <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" width="100%"/>
         <div class="row">
             <div class="col-md-12">
                 <h2 ng-bind="event.name"></h2>
@@ -53,7 +53,7 @@
             <option value="advanced">Advanced</option>
         </select>
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="session in event.sessions | orderBy:sortorder | filter:query">
+            <li class="list-group-item col-md-11" ng-repeat="session in event.sessions | orderBy:sortorder | filter:query" id="session{{session.id}}">
                 <div class="row session">
                     <div class="well col-md-1 votingWidget">
                         <div class="votingButton" ng-click="upVoteSession(session)">
@@ -83,6 +83,7 @@
 <script src="lib/underscore-min.js"></script>
 <script src="lib/bootstrap.min.js"></script>
 <script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
 <script src="lib/angular/angular-sanitize.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers/EventController.js"></script>
