@@ -35,8 +35,9 @@
         <option value="intermediate">Intermediate</option>
         <option value="advanced">Advanced</option>
     </select>
+    <hr />
     <ul class="list-group">
-        <li class="list-group-item col-md-11" ng-repeat="session in event.sessions | orderBy:sortorder | filter:query"
+        <li class="col-md-11" style="list-style: none" ng-repeat="session in event.sessions | orderBy:sortorder | filter:query"
             id="session{{session.id}}">
             <div class="row session">
                 <upvote upvote="upVoteSession(session)" downvote="downVoteSession(session)"
